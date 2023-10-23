@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Los Cuentos de Gasy</title>
+  <title>Los 4 fantaticos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
@@ -18,7 +18,7 @@
     <header class="d-flex flex-wrap py-2 pt-3 pt-md-2 pb-1 pb-md-3 ps-3 fixed-top bg-dark">
       <a href="#inicio"
         class="ms-md-5 d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <span class="fs-4 text-light">Los Cuentos de Gasy</span>
+        <span class="fs-4 text-light">Los 4 fantasticos</span>
       </a>
     </header>
 
@@ -102,7 +102,7 @@
     <!-- Pie de Página -->
     <footer class="bg-dark text-light py-3 fixed-bottom">
       <div class="container text-center">
-        &copy; 2023 Los Cuentos de Gasy
+        &copy; 2023 Los 4 fantasticos
       </div>
     </footer>
 
