@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Deportiva</title>
+    <!-- Enlace a Bootstrap (desde CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <style>
+        /* Agrega estilos personalizados aquí */
+        body {}
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+
+        .background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            background: #2980B9;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate 19s linear infinite;
+        }
+
+
+
+
+        .background li:nth-child(0) {
+            left: 10%;
+            width: 175px;
+            height: 175px;
+            bottom: -175px;
+            animation-delay: 1s;
+        }
+
+        .background li:nth-child(1) {
+            left: 56%;
+            width: 127px;
+            height: 127px;
+            bottom: -127px;
+            animation-delay: 2s;
+        }
+
+        .background li:nth-child(2) {
+            left: 34%;
+            width: 145px;
+            height: 145px;
+            bottom: -145px;
+            animation-delay: 5s;
+        }
+
+        .background li:nth-child(3) {
+            left: 50%;
+            width: 178px;
+            height: 178px;
+            bottom: -178px;
+            animation-delay: 6s;
+        }
+
+        .background li:nth-child(4) {
+            left: 52%;
+            width: 196px;
+            height: 196px;
+            bottom: -196px;
+            animation-delay: 9s;
+        }
+
+        .background li:nth-child(5) {
+            left: 68%;
+            width: 193px;
+            height: 193px;
+            bottom: -193px;
+            animation-delay: 4s;
+        }
+
+        .background li:nth-child(6) {
+            left: 54%;
+            width: 187px;
+            height: 187px;
+            bottom: -187px;
+            animation-delay: 13s;
+        }
+
+        .background li:nth-child(7) {
+            left: 10%;
+            width: 189px;
+            height: 189px;
+            bottom: -189px;
+            animation-delay: 1s;
+        }
+
+        .background li:nth-child(8) {
+            left: 22%;
+            width: 115px;
+            height: 115px;
+            bottom: -115px;
+            animation-delay: 3s;
+        }
+
+        .background li:nth-child(9) {
+            left: 20%;
+            width: 132px;
+            height: 132px;
+            bottom: -132px;
+            animation-delay: 23s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Barra de Navegación -->
+        <header class="d-flex flex-wrap justify-content-center py-2 fixed-top bg-dark">
+            <a href="#inicio"
+                class="ms-md-5 d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <span class="fs-4 text-light">Gasy Sport</span>
+            </a>
+
+            <ul class="nav nav-pills me-md-5">
+                <li class="nav-item"><a href="#inicio" class="nav-link" aria-current="page">Inicio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Servicios
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link" href="#personalizacion">Personalización de
+                                Productos</a></li>
+                        <li class="dropdown-item"><a class="nav-link" href="#ventas">Venta de Productos</a></li>
+                        <li class="dropdown-item">
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-item"><a class="nav-link" href="#ventas">Cotizaciones</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="dropdown-item"><a href="#servicio" class="nav-link">Solicitud Servicio</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#contacto" class="nav-link">Contáctenos</a></li>
+
+            </ul>
+        </header>
+
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="py-3 pt-5">
+            <div>
+                <div class="bg-dark text-secondary px-4 py-5 text-center">
+                    <div class="py-5">
+                        <h1 class="display-5 fw-bold text-white">Gasy Sport</h1>
+                        <div class="col-lg-6 mx-auto">
+                            <p class="fs-5 mb-4">Bienvenido a nuestra tienda online de productos
+                                deportivos. Descubre una amplia gama de equipos y accesorios de alta calidad para
+                                potenciar
+                                tu pasión por el deporte. Encuentra todo lo que necesitas para tu próxima aventura
+                                deportiva.</p>
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                <form action="#personalizacion">
+                                    <button type="submit" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Ver
+                                        Productos</button>
+                                    <button type="button" class="btn btn-outline-light btn-lg px-4"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Cotizar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner" style="max-height: 600px;">
+                        <div class="carousel-item active">
+                            <img src="img/ropa1.png" class="d-block w-100 img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ropa6.png" class="d-block w-100 img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ropa3.png" class="d-block w-100 img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ropa4.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ropa5.png" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Personalización de Productos -->
+        <section id="personalizacion" class="py-5">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="img/ropa8.png" class="d-block mx-lg-auto img-fluid rounded-4" alt="Bootstrap Themes"
+                            width="700" height="500" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Personalización de Productos</h1>
+                        <p class="lead">Entendemos que cada deportista es único. Por eso, ofrecemos la opción de
+                            personalizar tus productos deportivos favoritos. Desde camisetas hasta zapatillas,
+                            puedes hacer que tu equipo refleje tu estilo y personalidad.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button type="button" class="btn btn-dark btn-lg px-4 me-md-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Iniciar</button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Más Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-4 py-5" id="custom-cards">
+                <h2 class="pb-2 border-bottom">Productos Personalizables</h2>
+
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                            <!--style="background-image: url('ropa1.png');"-->
+                            <img src="img/ropa7.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                                loading="lazy">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 text-center">
+                                <h3 class="mb-4 display-6 lh-1 fw-bold">Camisetas y uniformes</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                            <!--style="background-image: url('ropa1.png');"-->
+                            <img src="img/gorra1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                                loading="lazy">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 text-center">
+                                <h3 class="mb-4 display-6 lh-1 fw-bold">Gorras</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                            <!--style="background-image: url('ropa1.png');"-->
+                            <img src="img/botella1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                                loading="lazy">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 text-center">
+                                <h3 class="mb-4 display-6 lh-1 fw-bold">Botellas</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-4" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">Proceso de Personalización</h2>
+                <div class="row g-4 pb-0 pt-5 row-cols-1 row-cols-lg-3">
+                    <div class="col d-flex align-items-start pb-1">
+                        <div
+                            class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <i class="bi bi-arrow-through-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Elige</h3>
+                            <p>Elige el producto que deseas personalizar</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <i class="bi bi-pencil-square"></i>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Diseño</h3>
+                            <p>Selecciona el diseño, colores y detalles que más te gusten</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <i class="bi bi-tencent-qq"></i>
+                        </div>
+                        <div>
+                            <h3 class="fs-2 text-body-emphasis">Personaliza</h3>
+                            <p>Añade tu nombre, número o cualquier otro elemento personalizado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ventas" class="py-3 pt-5">
+            <div class="bg-dark text-secondary px-4 py-5 text-center">
+                <div class="py-1">
+                    <h3 class="text-white">Ventas y Cotizaciones</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Ventas y Cotizaciones -->
+        <section class="py-1">
+            <div class="container px-4 py-5">               
+
+                <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-4">
+                    <div class="col d-flex flex-column align-items-start gap-2">
+                        <h2 class="fw-bold text-body-emphasis">Ofrecemos opciones de compra al por menor y al por
+                            mayor.</h2>
+                        <p class="text-body-secondary">En Nuestra Tienda Online, estamos comprometidos con brindarte
+                            una experiencia de compra sin complicaciones. Ya sea que desees realizar una compra
+                            inmediata o solicitar una cotización personalizada para equipos deportivos al por mayor,
+                            estamos aquí para ayudarte.</p>
+                        <a href="#" class="btn btn-dark btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Cotizar</a>
+                    </div>
+
+                    <div class="col">
+                        <div class="row row-cols-1 row-cols-sm-2 g-4">
+                            <div class="col d-flex flex-column gap-2">
+                                <div
+                                    class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                    <i class="bi bi-pin-angle-fill"></i>
+                                </div>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Ventas al por Menor</h4>
+                                <ul>
+                                    <li>Explora nuestra selección de productos.</li>
+                                    <li>Agrega los artículos que deseas al carrito de compras.</li>
+                                    <li>Procede al pago de forma segura.</li>
+                                </ul>
+                            </div>
+
+                            <div class="col d-flex flex-column gap-2">
+                                <div
+                                    class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                    <i class="bi bi-piggy-bank-fill"></i>
+                                </div>
+                                <h4 class="fw-semibold mb-0 text-body-emphasis">Ventas al por Mayor</h4>
+                                <ul>
+                                    <li>Si eres un equipo deportivo, una escuela o una empresa, contáctanos para
+                                        cotizaciones al por mayor.</li>
+                                    <li>Ofrecemos descuentos especiales para compras en gran cantidad.</li>
+                                    <li>Nos adaptamos a tus necesidades específicas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Solicitud de Servicios-->
+        <section id="servicio" class="py-3 pt-5">
+            <div class="bg-dark text-secondary px-4 py-5 text-center">
+                <div class="py-1">
+                    <h3 class="text-white">Solicitud de Servicio</h3>
+                </div>
+            </div>
+        </section>
+
+
+          <!--Creacion del formulario-->>
+          <section id="solicitud" class="py-5 pt-0">
+            <div class="container col-md-5">
+                <div class="py-5 text-center">                    
+                    <h3>Por favor, complete el formulario a continuación para solicitar un servicio.</h3>
+                </div>
+        
+                <form id="solicitudForm">
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label">Nombres y Apellidos del cliente</label>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Ej: Pepito Perez" required>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correoElectronico" placeholder="Ej: P@gmail.com" required>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="numeroCelular" class="form-label">Número de celular</label>
+                        <input type="tel" class="form-control" id="numeroCelular" placeholder="Ej: 3001111111" pattern="[0-9]*" required>
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="servicioSolicitado" class="form-label">Servicio que solicita</label>
+                        <select class="form-select" id="servicioSolicitado" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option value="Personalizacion">Personalización</option>
+                            <option value="PedidoMayorista">Pedido Mayorista</option>
+                            <option value="Devolucion">Devolución</option>
+                        </select>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary">Enviar datos</button>
+                    <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
+                </form>
+            </div>
+        </section>
+
+        <!--Script para traer la informacion del formulario con document.getElement -->>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const solicitudForm = document.getElementById("solicitudForm");
+                const cancelarBtn = document.getElementById("cancelarBtn");
+    
+                solicitudForm.addEventListener("submit", function(event) {
+                    event.preventDefault();
+    
+                    // Obtener los valores ingresados en el formulario
+                    const nombreCompleto = document.getElementById("nombreCompleto").value;
+                    const correoElectronico = document.getElementById("correoElectronico").value;
+                    const numeroCelular = document.getElementById("numeroCelular").value;
+                    const servicioSolicitado = document.getElementById("servicioSolicitado").value;
+    
+                    // Crear una nueva página para mostrar los datos
+                    //Variables para el tamaño del popup y centrarlo con respecto a la pantalla
+                    const width = 600; // Ancho de la ventana
+                    const height = 400; // Alto de la ventana
+                    const left = (window.screen.width - width) / 2;
+                    const top = (window.screen.height - height) / 2;
+                    
+                    const nuevaPagina = window.open('', '', `width=${width},height=${height},left=${left},top=${top}`);
+                    nuevaPagina.document.open();
+                    nuevaPagina.document.write('<html><head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head><body class="container">');
+                    nuevaPagina.document.write('<div class="d-flex flex-wrap justify-content-center py-2 fixed-top bg-dark"/><span class="fs-4 text-light">Gasy Sport</span></div>');                
+                    nuevaPagina.document.write('<div class="container pt-5" style="margin-top: 40px">')                
+                    nuevaPagina.document.write("<h2>Detalles de la Solicitud</h2>");
+                    nuevaPagina.document.write('<table class="table">');
+                    nuevaPagina.document.write("<tr><td>Nombres y Apellidos:</td><td>" + nombreCompleto + "</td></tr>");
+                    nuevaPagina.document.write("<tr><td>Correo Electrónico:</td><td>" + correoElectronico + "</td></tr>");
+                    nuevaPagina.document.write("<tr><td>Número de Celular:</td><td>" + numeroCelular + "</td></tr>");
+                    nuevaPagina.document.write("<tr><td>Servicio Solicitado:</td><td>" + servicioSolicitado + "</td></tr>");
+                    nuevaPagina.document.write("</table>");
+                    nuevaPagina.document.write("</div>");
+                    nuevaPagina.document.close();
+                });
+    
+                cancelarBtn.addEventListener("click", function() {
+                    window.location.href = "#inicio"; // Vuelve a la sección de inicio
+                });
+            });
+        </script>
+
+        <section id="contacto" class="py-3 pt-5">
+            <div class="bg-dark text-secondary px-4 py-5 text-center">
+                <div class="py-1">
+                    <h3 class="text-white">Contáctenos</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="py-5">
+            <div class="container">
+                <div class="py-5 text-center">
+                    
+                    <h2 style="display: none;">Contáctenos</h2>
+                    <p class="lead">Estamos aquí para responder a todas tus preguntas y atender tus inquietudes. No
+                        dudes en ponerte en contacto con nuestro equipo de atención al cliente. Estamos disponibles
+                        por correo electrónico, teléfono y redes sociales.</p>
+                </div>
+                <!-- Agrega información de contacto y formulario de contacto aquí -->
+                <div class="row py-5">
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-dark">Info</span>
+                            <span class="badge bg-dark rounded-pill">Contacto</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Correo Electrónico</h6>
+                                    <small class="text-body-secondary">info@nuestratiendaonline.com</small>
+                                </div>
+                                <span class="text-body-secondary"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Teléfono</h6>
+                                    <small class="text-body-secondary">+123 456 7890</small>
+                                </div>
+                                <span class="text-body-secondary"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Redes Sociales</h6>
+                                    <small class="text-body-secondary">Síguenos en Facebook, Instagram y Twitter
+                                        para obtener las últimas actualizaciones y ofertas.</small>
+                                </div>
+                                <span class="text-body-secondary"></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                                <div class="text-success">
+                                    <h6 class="my-0">Horario de Atención</h6>
+                                    <small>Lunes a Viernes: 9:00 AM - 6:00 PM
+                                        Sábados y Domingos: Cerrado</small>
+                                </div>
+                                <span class="text-success"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card card-cover h-100 overflow-hidden ounded-4 shadow-sm">
+                            <!--style="background-image: url('ropa1.png');"-->
+                            <a href="https://maps.app.goo.gl/iTRqjxgbZpegEy52A" target="_blank">
+                                <img src="img/mapa1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                                    loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Formulario-->
+        <section class="py-5 ">
+            <div class="bg-dark text-light">
+                <!--Formulario de contacto-->
+                <div class="row pt-5 g-5">
+                    <div class="col-md-8 pt-5 m-auto ps-5 pe-5">
+                        <h4 class="mb-3">Escríbenos</h4>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email <span
+                                            class="invisible text-body-secondary">(Optional)</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                </div>
+
+                            </div>
+
+                            <hr class="my-4">
+
+                            <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="empty py-5"></div>
+            </div>
+
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Demo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <i class="bi bi-emoji-wink"></i> Botón solo de demo.
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Info en Construcción-->
+        <div class="modal fade" id="modalConstruccion" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-danger">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">En Construción</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-danger">
+                        <i class="bi bi-building-fill-up"></i> Esta opción se encuenta en construcción.
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de Página -->
+        <footer class="bg-dark text-light py-3 fixed-bottom">
+            <div class="container text-center">
+                &copy; 2023 Gasy Sport
+            </div>
+        </footer>
+
+
+    </main>
+
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- Scripts de Bootstrap (desde CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
